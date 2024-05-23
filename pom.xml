@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -11,14 +10,14 @@
 	<groupId>Spring</groupId>
 	<artifactId>pet-clinic</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>pet-clinic</name>
+	<packaging>pom</packaging>
+	<name>pet-clinic</name>
 	<description>pet-clinic</description>
-    <modules>
-        <module>pet-clinic-data</module>
+	<modules>
+		<module>pet-clinic-data</module>
 		<module>pet-clinic-web</module>
 	</modules>
-    <properties>
+	<properties>
 		<java.version>17</java.version>
 	</properties>
 
@@ -35,9 +34,21 @@
 					<goal>install</goal>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<goals>install</goals>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
-
-
+	<scm>
+		<connection>scm:git:https://github.com/HarshitYadav704/Pet-Clinic.git</connection>
+		<developerConnection>scm:git:https://github.com/HarshitYadav704/Pet-Clinic.git</developerConnection>
+		<url>https://github.com/HarshitYadav704/Pet-Clinic</url>
+		<tag>HEAD</tag>
+	</scm>
 </project>
